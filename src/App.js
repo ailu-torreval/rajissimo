@@ -1,19 +1,26 @@
-import './App.css';
-import React, { useState} from "react";
-import Website from './pages/Website';
-import OrderApp from './pages/OrderApp';
+import "./App.css";
+import React, { useState } from "react";
+import Website from "./Website";
+import OrderApp from "./OrderApp";
+import Footer from "./components/Footer";
+import NavBar from "./components/NavBar";
+import { LoginContext } from "./contexts/LoginContext";
+import { PageContext } from "./contexts/PageContext";
 
 function App() {
-  const [isLogin, setIsLogin] = useState(false);
+  const { page, setPage } = useState("website");
+  const { isLogin, setIsLogin } = useState(false);
 
   return (
     <>
-    {isLogin ? 
-    <OrderApp /> :
-    <Website />
-    }
+      <LoginContext.Provider value={{ isLogin, setIsLogin }}>
+      <PageContext.Provider value={{ page, setPage }}>
+        <NavBar className="website-header" cta="Order Now ➔" />
+        {isLogin ? <OrderApp /> : <Website />}
+        <Footer />
+      </PageContext.Provider>
+      </LoginContext.Provider>
     </>
-
   );
 }
 
