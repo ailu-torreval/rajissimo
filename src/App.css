@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 
-/* @layer base{
+@layer base{
     h1{
         @apply text-5xl lg:text-7xl font-header;
     }
@@ -18,4 +18,4 @@
     p{
         @apply text-xs lg:text-base font-body;
     }
-} */
+}
