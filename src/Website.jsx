@@ -7,11 +7,13 @@ import AbUsPage from "./pages/AbUsPage";
 function Website() {
   const { page, setPage } = useContext(PageContext);
 
+  setPage('homePage');
+
   return (
     <>
-    {page == 'homePage' && <HomePage />}
-    {page == 'menuPage' && <MenuPage />}
-    {page == 'abUsPage' && <AbUsPage />}
+    {page === 'homePage' && <HomePage />}
+    {page === 'menuPage' && <MenuPage />}
+    {page === 'abUsPage' && <AbUsPage />}
     </>
   )
 }

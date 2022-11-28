@@ -4,6 +4,7 @@ import Website from "./Website";
 import OrderApp from "./OrderApp";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
+import BurgerMenu from "./components/BurgerMenu";
 import { LoginContext } from "./contexts/LoginContext";
 import { PageContext } from "./contexts/PageContext";
 
