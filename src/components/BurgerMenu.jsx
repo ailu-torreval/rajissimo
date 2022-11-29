@@ -9,22 +9,27 @@ function BurgerMenu(props) {
   const { isLogin, setIsLogin } = useContext(LoginContext);
   const { page, setPage } = useContext(PageContext);
 
+  
   function goToHome() {
     isLogin === true && setIsLogin(false);
+    props.setShowBurgerMenu(false);
     setPage("homePage");
   }
 
   function goToMenuPage() {
     isLogin === true && setIsLogin(false);
+    props.setShowBurgerMenu(false);
     setPage("menuPage");
   }
 
   function goToAboutUs() {
     isLogin === true && setIsLogin(false);
+    props.setShowBurgerMenu(false);
     setPage("abUsPage");
   }
 
   function goToOrderApp() {
+    props.setShowBurgerMenu(false);
     setIsLogin(true);
   }
 
