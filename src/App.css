@@ -66,3 +66,6 @@
   .btn2:hover::before {
     width: 100%;
   }
+.btn1{
+    @apply bg-yellow p-2 rounded-[126px] tracking-wide font-header uppercase text-white;
+}
