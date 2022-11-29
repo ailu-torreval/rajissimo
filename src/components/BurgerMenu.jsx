@@ -36,12 +36,12 @@ function BurgerMenu(props) {
   
 
   return (
-    <div className="flex flex-column gap-x-6 justify-between md:hidden">
+    <div className="flex flex-col gap-x-6 justify-between md:hidden">
       { isLogin ?
       <SearchComponent /> :
       <>      
       <BtnGrid
-        class="flex flex-column gap-x-6 justify-between"
+        class="flex flex-col gap-x-6 justify-between"
         btn1action={goToHome}
         btn1content="Home"
         btn1class="btn3"

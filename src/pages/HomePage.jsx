@@ -13,8 +13,8 @@ function HomePage() {
     <HeroSection />
     <BannerSection />
     <FoodSection />
-    <AbUsSection />
     <SubscriptionSection />
+    <AbUsSection />
     </>
   )
 }
