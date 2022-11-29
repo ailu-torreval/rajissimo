@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import { useState, useContext } from "react";
 import Logo from "./Logo";
 import BtnGrid from "./BtnGrid";
 import Btn from "./Btn";

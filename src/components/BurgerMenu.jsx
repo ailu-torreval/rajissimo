@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import { useContext } from "react";
 import BtnGrid from "./BtnGrid";
 import Btn from "./Btn";
 import SearchComponent from "./SearchComponent";
@@ -23,11 +23,6 @@ function BurgerMenu(props) {
       function goToAboutUs() {
         isLogin === true && setIsLogin(false);
         setPage("abUsPage");
-      }
-    
-      function openBurger() {
-        props.setShowBurgerMenu(true);
-        console.log("open burger");
       }
     
       function goToOrderApp() {

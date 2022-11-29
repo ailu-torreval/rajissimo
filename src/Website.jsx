@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { PageContext } from './contexts/PageContext'
 import HomePage from "./pages/HomePage";
 import MenuPage from "./pages/MenuPage";
