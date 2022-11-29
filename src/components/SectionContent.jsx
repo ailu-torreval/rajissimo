@@ -4,8 +4,8 @@ import Btn from './Btn'
 function SectionContent(props) {
   return (
     <div className="flex flex-col justify-around">
-        <h3>{props.title}</h3>
-        <p>{props.content}</p>
+        <h3 className={props.titleClass}>{props.title}</h3>
+        <p className={props.contentClass}>{props.content}</p>
         <Btn 
         class={props.btnClass}
         content={props.btnContent}
