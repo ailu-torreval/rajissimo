@@ -19,3 +19,6 @@
         @apply text-xs lg:text-base font-body;
     }
 }
+.btn1{
+    @apply bg-yellow p-2 rounded-[126px] tracking-wide font-header uppercase text-white;
+}
