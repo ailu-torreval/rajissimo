@@ -18,7 +18,7 @@ function Footer(props) {
 
   function goToOrderApp() {
     setIsLogin(true);
-    setPage('orderPage');
+    setPage('landingPage');
   }
 
   function goToMenu() {

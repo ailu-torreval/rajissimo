@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import OrderPage from "./pages/OrderPage";
 import PlaceOrderPage from "./pages/PlaceOrderPage";
 import { OrderContext } from "./contexts/OrderContext";
-import LandingSection from "./sections/LandingSection";
+import {OrderProductsContext } from "./contexts/OrderProductsContext";
+import LandingSection from "./pages/LandingPage";
+import { PageContext } from "./contexts/PageContext";
 
 function OrderApp() {
-  const [isOrder, setIsOrder] = useState(false);
+
   const [productsData, setProductsData] = useState([]);
   const [orderForm, setOrderForm] = useState({
     firstName: "",
@@ -17,6 +19,8 @@ function OrderApp() {
     order: {},
     isOrder: false,
   });
+
+  const { page, setPage } = useContext(PageContext)
 
   const url = "https://deliveryproducts-9391.restdb.io/rest/delivery-products";
   const options = {
@@ -34,11 +38,13 @@ function OrderApp() {
   }, []);
   return (
     <main>
+      <OrderProductsContext.Provider value={{ productsData, setProductsData }}>
       <OrderContext.Provider value={{ orderForm, setOrderForm }}>
-        {/* {orderForm.address1 == "" && <LandingSection />} */}
-        {/* {orderForm.address1.length > 1 && <PlaceOrderPage />} */}
-        {/* {orderForm.isOrder && <OrderPage />} */}
+        { page === 'landingPage' && <LandingPage /> }
+        { page === 'rderPage' && <OrderPage /> }
+        { page === 'placeOrderPage' && <placeOrderPage /> }
       </OrderContext.Provider>
+      </ OrderProductsContext.Provider>
     </main>
   );
 }

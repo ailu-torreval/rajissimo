@@ -38,6 +38,7 @@ function NavBar(props) {
 
   function goToOrderApp() {
     setIsLogin(true);
+    setPage('landingPage')
   }
 
   return (
