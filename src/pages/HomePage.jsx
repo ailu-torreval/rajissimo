@@ -20,6 +20,12 @@ function HomePage() {
 
   }
 
+  function goToSubsPage() {
+    console.log("subs");
+    setPage("subsPage")
+
+  }
+
 
 
   return (
@@ -49,7 +55,16 @@ function HomePage() {
         btnClass="btn2"
         btnAction={goToAbUs}
       />
-      <SubscriptionSection />
+      <SubscriptionSection
+      class="mx-8 my-4 flex flex-col justify-center align-center bg-white"
+      title="MEET OUR NEW SUBSCRIPTION CARD"
+      titleClass="text-blue text-center"
+      content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quae voluptatum vel voluptate, mollitia provident asperiores quibusdam deserunt! Maxime reiciendis quidem magni voluptas ut, eius quod unde incidunt recusandae nemo."
+      contentClass="text-blue"
+      btnContent="Learn More ➔"
+      btnClass="btn1"
+      btnAction={goToSubsPage} />
+      
     </>
   );
 }

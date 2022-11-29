@@ -1,9 +1,17 @@
 import React from 'react'
+import Btn from '../components/Btn'
 
-function SubscriptionSection() {
+function SubscriptionSection(props) {
   return (
-    <div>SubscriptionSection</div>
-  )
+    <section className={props.class}>
+      <h3 className={props.titleClass}>{props.title}</h3>
+      <p className={props.contentClass}>{props.content}</p>
+      <Btn
+      class={props.btnClass}
+      action={props.btnAction}
+      content={props.btnContent} />   
+    </section>
+    )
 }
 
 export default SubscriptionSection
