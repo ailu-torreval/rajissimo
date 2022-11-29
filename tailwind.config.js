@@ -11,6 +11,10 @@ module.exports = {
         cyan: "#08B7B3",
         blue: "#104057",
         yellow: "#FCAF3E",
+        darkyellow: "#A6680A",
+      },
+      animation: {
+        "spin-slow": "spin 10s linear infinite",
       },
     },
   },

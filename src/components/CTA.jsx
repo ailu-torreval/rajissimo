@@ -2,16 +2,12 @@ import React from "react";
 
 function CTA() {
   return (
-    <button>
-      <svg viewBox="0 0 100 100" width="100" height="100">
+    <button className="relative font-header uppercase text-blue">
+      <span className="absolute text-4xl left-0 right-0 top-7 text-blue">
+        ➔
+      </span>
+      <svg viewBox="0 0 100 100" width="100" height="100" className="animate-spin-slow">
         <defs>
-          <style>
-            fill: #104057; 
-            height: auto; 
-            max-width: 66vmin;
-            transform-origin: center; 
-            width: 66%;
-          </style>
           <path
             id="circle"
             d="
@@ -21,9 +17,9 @@ function CTA() {
           a 37,37 0 1,1 -74,0"
           />
         </defs>
-        <text fontSize="11" color="#104057">
+        <text fontSize="9.4" color="#104057">
           <textPath xlinkHref="#circle">
-             Order Online - Order Online - Order Online -
+            Order Online · Order Online · Order Online ·
           </textPath>
         </text>
       </svg>

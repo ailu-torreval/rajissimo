@@ -25,7 +25,9 @@ function NavBar(props) {
   }
 
   function openBurger() {
-    props.showBurgerMenu === true ? props.setShowBurgerMenu(false) : props.setShowBurgerMenu(true);
+    props.showBurgerMenu === true
+      ? props.setShowBurgerMenu(false)
+      : props.setShowBurgerMenu(true);
     console.log("open burger", props.showBurgerMenu);
   }
 
@@ -34,7 +36,7 @@ function NavBar(props) {
   }
 
   return (
-    <nav className="flex justify-between px-2 bg-cyan h-16">
+    <nav className="flex text-lg justify-between items-center px-2 font-body text-darkyellow h-16 m-4">
       <Logo />
       <BtnGrid
         class="flex gap-x-6 justify-between"
