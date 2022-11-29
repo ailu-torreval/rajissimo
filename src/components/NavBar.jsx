@@ -12,16 +12,21 @@ function NavBar(props) {
   function goToHome() {
     isLogin === true && setIsLogin(false);
     setPage("homePage");
+    console.log(page);
+
   }
 
   function goToMenuPage() {
     isLogin === true && setIsLogin(false);
     setPage("menuPage");
+    console.log(page);
   }
 
   function goToAboutUs() {
     isLogin === true && setIsLogin(false);
     setPage("abUsPage");
+    console.log(page);
+
   }
 
   function openBurger() {

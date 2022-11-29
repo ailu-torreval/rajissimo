@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import HeroSection from "../sections/HeroSection";
 import BannerSection from "../sections/BannerSection";
 import Section from "../sections/Section";
 import SubscriptionSection from "../sections/SubscriptionSection";
+import { PageContext } from "../contexts/PageContext";
 
 function HomePage() {
+
+  const {page, setPage} = useContext(PageContext);
+
+  function goToMenu() {
+    console.log("menu");
+    setPage("menuPage")
+  }
+
+  function goToAbUs() {
+    console.log("menu");
+    setPage("abUsPage")
+
+  }
 
 
 
@@ -21,7 +35,7 @@ function HomePage() {
         contentClass="text-blue"
         btnContent="See Menu ➔"
         btnClass="btn2"
-        // btnAction={goToMenu()}
+        btnAction={goToMenu}
       />
       <Section
         img=""
@@ -33,7 +47,7 @@ function HomePage() {
         contentClass="text-blue"
         btnContent="About Us ➔"
         btnClass="btn2"
-        // btnAction={goToAbUs()}
+        btnAction={goToAbUs}
       />
       <SubscriptionSection />
     </>
