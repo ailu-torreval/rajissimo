@@ -3,7 +3,7 @@ import OrderPage from "./pages/OrderPage";
 import PlaceOrderPage from "./pages/PlaceOrderPage";
 import { OrderContext } from "./contexts/OrderContext";
 import {OrderProductsContext } from "./contexts/OrderProductsContext";
-import LandingSection from "./pages/LandingPage";
+import LandingPage from "./pages/LandingPage";
 import { PageContext } from "./contexts/PageContext";
 
 function OrderApp() {
@@ -36,6 +36,7 @@ function OrderApp() {
         console.log(productsData);
       });
   }, []);
+  console.log(page);
   return (
     <main>
       <OrderProductsContext.Provider value={{ productsData, setProductsData }}>

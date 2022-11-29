@@ -9,10 +9,11 @@ import { LoginContext } from "./contexts/LoginContext";
 import { PageContext } from "./contexts/PageContext";
 
 function App() {
-  const [page, setPage] = useState("homePage");
+  const [page, setPage] = useState("landingPage");
   const [isLogin, setIsLogin] = useState(true);
   const [showBurgerMenu, setShowBurgerMenu] = useState(false);
 
+ 
   return (
     <>
       <LoginContext.Provider value={{ isLogin, setIsLogin }}>
