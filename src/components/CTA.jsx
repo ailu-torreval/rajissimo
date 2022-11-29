@@ -1,8 +1,8 @@
 import React from "react";
 
-function CTA() {
+function CTA(props) {
   return (
-    <button className="relative font-header uppercase text-blue">
+    <button onClick={props.action} className="relative font-header uppercase text-blue">
       <span className="absolute text-4xl left-0 right-0 top-7 text-blue">
         ➔
       </span>

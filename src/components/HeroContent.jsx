@@ -1,10 +1,12 @@
-import React from 'react'
+import {useContext} from 'react'
 import CTA from './CTA'
+import { LoginContext } from '../contexts/LoginContext'
 
 function HeroContent() {
+  const {isLogin, setIsLogin} = useContext(LoginContext);
 
     function goToOrderApp() {
-
+      setIsLogin(true);
     }
 
   return (
