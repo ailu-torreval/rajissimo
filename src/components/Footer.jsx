@@ -35,13 +35,13 @@ function Footer(props) {
   }
 
   return (
-    <footer className="px-16 pt-16 pb-4 bg-[#FEE3BB]">
-      <div className="flex flex-col justify-between md:flex-row md:mb-16">
-        <ul>
+    <footer className="px-8 md:px-16 pt-16 md:pb-4 bg-[#FEE3BB]">
+      <div className="flex flex-col justify-between md:flex-row md:mb-8">
+        <ul className="mb-4">
           {isLogin ? (
             <li
               onClick={goToHomePage}
-              className="flex items-center justify-between gap-2"
+              className="flex items-center md:justify-between gap-2"
             >
               <span>
                 <svg
@@ -62,7 +62,7 @@ function Footer(props) {
           ) : (
             <li
               onClick={goToOrderApp}
-              className="flex items-center justify-between gap-2"
+              className="flex items-center md:justify-between gap-2"
             >
               <span>
                 <svg
@@ -81,7 +81,7 @@ function Footer(props) {
               <span>Order App</span>
             </li>
           )}
-          <li className="flex items-center justify-between">
+          <li className="flex items-center md:justify-between gap-2">
             <svg
               width="43"
               height="43"
@@ -99,7 +99,7 @@ function Footer(props) {
             </span>
           </li>
         </ul>
-        <div className="md:flex md:gap-48">
+        <div className="flex flex-col md:flex-row gap-4 mb-4 md:gap-48 ">
           <Links
             title="About"
             link1="Menu"
@@ -118,8 +118,10 @@ function Footer(props) {
           />
         </div>
       </div>
-      <div className="flex justify-between border-solid border-t-2 border-top border-[#FCAF3E] pt-4">
-        <p className="text-blue">All rights reserved © 2022</p>
+      <div className="flex flex-col gap-4 justify-between border-solid border-t-2 border-top border-[#FCAF3E] pt-4 md:flex-row">
+        <p className="text-blue order-1 md:order-none">
+          All rights reserved © 2022
+        </p>
         <ul className="flex">
           <li>
             <svg

@@ -30,7 +30,7 @@ function HomePage() {
       <BannerSection />
       <Section
         img={img}
-        class="flex flex-col md:flex-row justify-center md:gap-x-24 mx-8 my-2"
+        class="flex flex-col md:flex-row justify-center md:gap-x-24 mx-8 my-2 md:py-[100px] py-[40px]"
         title="FRIENDS. WAFFLES. ENJOY"
         titleClass="text-blue"
         content="No matter what you are doing or who you are spending time with, waffles are always a good idea. Our delicious and delicate waffles, dipped in homemade chocolate and sprinkled with your favourites toppings will delight you."
@@ -41,7 +41,7 @@ function HomePage() {
       />
       <Section
         img={img}
-        class="flex flex-col-reverse md:flex-row-reverse justify-center md:gap-x-24 mx-8 my-2"
+        class="flex flex-col-reverse md:flex-row-reverse justify-center md:gap-x-24 md:py-[100px] mx-8 my-2 py-[40px]"
         title="FROM THE SCRATCH…
         AS WELL AS EVERYDAY"
         titleClass="text-blue"
@@ -52,7 +52,7 @@ function HomePage() {
         btnAction={goToAbUs}
       />
       <SubscriptionSection
-        class="my-4 mx-auto flex flex-col justify-center text-center items-center bg-white max-w-4xl gap-2"
+        class="my-4 mx-auto flex flex-col justify-center text-center items-center bg-white max-w-4xl gap-2 md:py-[100px] py-[40px] px-8"
         title="MEET OUR NEW SUBSCRIPTION CARD"
         titleClass="text-blue text-center"
         content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quae voluptatum vel voluptate, mollitia provident asperiores quibusdam deserunt! Maxime reiciendis quidem magni voluptas ut, eius quod unde incidunt recusandae nemo."
