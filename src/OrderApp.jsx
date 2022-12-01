@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useContext } from "react";
+import GameBanner from "./components/GameBanner";
 import OrderPage from "./pages/OrderPage";
 import PlaceOrderPage from "./pages/PlaceOrderPage";
+import LandingPage from "./pages/LandingPage";
 import { OrderContext } from "./contexts/OrderContext";
 import {OrderProductsContext } from "./contexts/OrderProductsContext";
-import LandingPage from "./pages/LandingPage";
 import { PageContext } from "./contexts/PageContext";
 
 function OrderApp() {
@@ -12,12 +13,13 @@ function OrderApp() {
   const [orderForm, setOrderForm] = useState({
     firstName: "",
     lastName: "",
-    addres1: "",
+    address1: undefined,
     address2: "",
     zip: "",
     city: "",
     order: {},
     isOrder: false,
+    isDelivery: undefined
   });
 
   const { page, setPage } = useContext(PageContext)
@@ -41,9 +43,11 @@ function OrderApp() {
     <main>
       <OrderProductsContext.Provider value={{ productsData, setProductsData }}>
       <OrderContext.Provider value={{ orderForm, setOrderForm }}>
+        { page === 'landingPage' && <GameBanner /> }
+        { page === 'orderPage' && <GameBanner /> }
         { page === 'landingPage' && <LandingPage /> }
-        { page === 'rderPage' && <OrderPage /> }
-        { page === 'placeOrderPage' && <placeOrderPage /> }
+        { page === 'orderPage' && <OrderPage /> }
+        { page === 'placeOrderPage' && <PlaceOrderPage /> }
       </OrderContext.Provider>
       </ OrderProductsContext.Provider>
     </main>
