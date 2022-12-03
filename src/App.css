@@ -7,13 +7,13 @@
 
 @layer base{
     h1{
-        @apply text-5xl lg:text-7xl font-header;
+        @apply text-5xl lg:text-7xl font-header mb-3 text-blue;
     }
     h2{
-        @apply text-3xl lg:text-6xl font-header;
+        @apply text-3xl lg:text-6xl font-header mb-3 text-blue;
     }
     h3{
-        @apply text-2xl lg:text-5xl font-header;
+        @apply text-2xl lg:text-5xl font-header mb-3 text-blue;
     }
     p{
         @apply text-sm lg:text-base font-body;
@@ -32,6 +32,8 @@
     overflow: hidden;
     z-index: 1;
     background-color: transparent;
+    font-family: "Titan One", "cursive";
+    color:#104057;
 
 }
 
@@ -67,5 +69,5 @@
     width: 100%;
   }
 .btn1{
-    @apply bg-yellow px-5 py-3 rounded-[126px] tracking-wide font-header uppercase text-white self-center;
+    @apply bg-yellow px-5 py-3 rounded-[126px] tracking-wide font-header uppercase text-white self-center hover:text-[#875407] ease-in duration-300;
 }

@@ -2,11 +2,17 @@ import React from "react";
 
 function CTA(props) {
   return (
-    <button onClick={props.action} className="relative font-header uppercase text-blue">
-      <span className="absolute text-4xl left-0 right-0 top-7 text-blue">
-        ➔
-      </span>
-      <svg viewBox="0 0 100 100" width="100" height="100" className="animate-spin-slow">
+    <button
+      onClick={props.action}
+      className="relative font-header uppercase text-blue"
+    >
+      <span className="absolute text-4xl left-0 right-0 top-7">➔</span>
+      <svg
+        viewBox="0 0 100 100"
+        width="100"
+        height="100"
+        className="animate-spin-slow"
+      >
         <defs>
           <path
             id="circle"
