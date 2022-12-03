@@ -31,6 +31,7 @@ function BurgerMenu(props) {
   function goToOrderApp() {
     props.setShowBurgerMenu(false);
     setIsLogin(true);
+    setPage('landingPage')
   }
 
   return (

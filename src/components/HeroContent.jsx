@@ -1,12 +1,15 @@
 import {useContext} from 'react'
 import CTA from './CTA'
 import { LoginContext } from '../contexts/LoginContext'
+import { PageContext } from '../contexts/PageContext';
 
 function HeroContent() {
   const {isLogin, setIsLogin} = useContext(LoginContext);
+  const {page, setPage } = useContext(PageContext)
 
     function goToOrderApp() {
       setIsLogin(true);
+      setPage('landingPage')
     }
 
   return (
